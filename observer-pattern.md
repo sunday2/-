@@ -21,7 +21,7 @@ Subject和Observer 各自分别引用对方.Observer 引用Subject是为了新�
 
 * Step 1
 
-```
+```java
 //Subject.java
 
 import java.util.ArrayList;
@@ -60,7 +60,7 @@ Create Observer class.
 Observer.java
 ```
 
-```
+```java
 public abstract class Observer {
    protected Subject subject;
    public abstract void update();
@@ -73,7 +73,7 @@ public abstract class Observer {
 Create concrete observer classes
 ```
 
-```
+```java
 //BinaryObserver.java
 public class BinaryObserver extends Observer{
 
@@ -89,7 +89,7 @@ public class BinaryObserver extends Observer{
 }
 ```
 
-```
+```java
 //OctalObserver.java
 public class OctalObserver extends Observer{
 
@@ -105,7 +105,7 @@ public class OctalObserver extends Observer{
 }
 ```
 
-```
+```java
 //HexaObserver.java
 public class HexaObserver extends Observer{
 
@@ -127,7 +127,7 @@ public class HexaObserver extends Observer{
 Use Subject and concrete observer objects.
 ```
 
-```
+```java
 //ObserverPatternDemo.java
 public class ObserverPatternDemo {
    public static void main(String[] args) {
