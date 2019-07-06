@@ -177,5 +177,10 @@ public class JdkProxyDemo {
 (4)通过Proxy的静态方法newProxyInstance动态生成被代理类的代理类。
 
 这里，觉得要注意的是传递给newProxyInstance方法的是InvocationHandler的实现类，而传递给InvocationHandler构造函数的是被代理类。
+
+
+由于jdk的动态代理的代理对象是基于接口的，它会生成目标对象的接口的子对象，所以更具松耦合性；
+而cglib运行速度更快，但是生成速度偏慢。
+spring aop的实现核心技术是动态代理，其默认会根据被代理对象是否有实现接口来判断是使用jdk的动态代理还是cglib，当然也可以通过配置强制使用，但是约定优于配置。
 ```
 
